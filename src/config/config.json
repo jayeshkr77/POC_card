@@ -1,0 +1,17 @@
+{   
+    "RESTURANT":{
+        "NAME":"DD",
+        "DEFAULT_LANGUAGE": "en",
+        "PARAMETERS":{
+            "BANNER": true
+        }
+    },
+    "BACKEND":{
+        "HTTP_PROTOCOL": "http",
+        "BACKEND_URL": "localhost:5002",
+        "CONFIGS": {
+            "TEXT": "text",
+            "PARAMETERS": "params"
+        }
+    }
+}
