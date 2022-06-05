@@ -44,7 +44,7 @@ function Main() {
       })
       .catch(error => {
         console.log('error', error);
-        // setParameters(config.RESTURANT.PARAMETERS);
+        setParameters(config.RESTURANT.PARAMETERS);
       });
 
   },[])
