@@ -8,9 +8,16 @@ flowchart LR
 ### UI Flow
 ```mermaid
 flowchart TD
+    subgraph backend
+    Z[(Backend API)]
+    end
+    subgraph frontend
+    UIVar[defaultVar.scss]-->UI[defaultUI.scss]
+    RV[Resturant_Var.css]-->UI;
+    UI--->A
     A[App.tsx]-->B[Routes.tsx];
-    B--/login-->L[Login.tsx]
     B--/register-->R[Register.tsx]
+    B--/login-->L[Login.tsx]
     B--/dashboard-->D[Dashboard.tsx]
     L--Logged in-->D
     B--/-->M[Main.tsx]
@@ -20,8 +27,15 @@ flowchart TD
     H--Params.BANNER-->Y[Banner.tsx];
     H--Text.CONTENT-->W[Menu.tsx];
     H--Text.POPUP-->X[Popup.tsx]; 
-    Z[Backend API] --Resturant params & text--->M;
-    D-->HomeDashboard.tsx
+    Z--Resturant params & text--->M;
+    M-->Z;
+    D-->HD[HomeDashboard.tsx];
     D-->DM[AddMenu.tsx];
-    D-->Translations.tsx
+    D-->Translations.tsx;
+    D-->QR[QR.tsx];
+    L-->Z
+    Z-->L
+    R-->Z
+    Z-->R
+    end
 ```

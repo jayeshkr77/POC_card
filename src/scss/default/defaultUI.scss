@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     font-family: $mainFont;
-    font-size: 2rem;
+    font-size: $splashScreen-fontSize;
 }
 
 .loader {
@@ -48,4 +48,47 @@
     100% {
         transform: translateX(0) scale(1);
     }
+}
+
+.login-form {
+    padding: $login-padding;
+}
+
+.title {
+    color: $blue-dark-2;
+    opacity: $form-title-opacity;
+    margin-bottom: 5px;
+    font-size: $form-title-fontSize;
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.label {
+    color: $blue-dark-2;
+    opacity: $form-label-opacity;
+    margin-bottom: 5px;
+    font-size: $form-label-fontSize;
+    text-align: left;
+}
+
+input {
+    border-radius: 5px;
+    border: 2px solid $blue-light-1;
+    padding: 12px 20px;
+    padding-right: 20px;
+    background: $input-background;
+    color: $blue-dark-1;
+    font-weight: $input-fonWeight;
+    font-size: $input-fontSize;
+    font-family: $mainFont;
+}
+
+.login-btn {
+    color: $login-btn;
+    background-color: $blue-dark-1;
 }

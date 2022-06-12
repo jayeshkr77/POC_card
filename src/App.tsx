@@ -1,12 +1,12 @@
 import './App.css';
-import Main from './components/Main';
+import Routers from './components/Routers';
 import './scss/default/defaultUI.scss';
 
 function App() {
   
   return (
     <div className="App">
-      <Main />
+      <Routers />
     </div>
   );
 }
